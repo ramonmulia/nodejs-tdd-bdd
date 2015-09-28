@@ -1,0 +1,20 @@
+{
+  "name": "curso-nodejs-tdd-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "charlatan": "^1.0.0",
+    "co-body": "^4.0.0",
+    "koa": "^1.0.0",
+    "koa-router": "^5.1.2",
+    "mongoose": "^4.1.8",
+    "superagent": "^1.4.0"
+  }
+}
