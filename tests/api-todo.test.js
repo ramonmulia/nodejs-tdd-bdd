@@ -10,8 +10,8 @@ const baseUrl = 'http://localhost:3000';
 describe("routes todo testing", () => {
 
     let body = {
-            details: ch.Name.name()
-        };
+        details: ch.Name.name()
+    };
     let id = null;
 
     it('should be create a todo', (done)=> {
@@ -35,14 +35,39 @@ describe("routes todo testing", () => {
             });
     });
 
+
+    it('should update one todo by id', (done)=> {
+        let body = {
+            details: ch.Name.name()
+        };
+
+        request
+            .put(url.resolve(baseUrl, '/api/v1/todos/' + id))
+            .send(body)
+            .end((err, res) => {
+                res.status.should.be.equal(202);
+                done();
+            });
+    });
+
     it('should be get todos by id', (done)=> {
         request
-            .get(url.resolve(baseUrl, '/api/v1/todos/'+id))
+            .get(url.resolve(baseUrl, '/api/v1/todos/' + id))
             .end((err, res) => {
-                console.log(res.body);
                 res.body.should.be.a('object');
                 res.body._id.should.exist;
                 done();
             });
     });
+
+    it('should delete todos by id', (done)=> {
+        request
+            .del(url.resolve(baseUrl, '/api/v1/todos/' + id))
+            .end((err, res) => {
+                res.status.should.be.equal(204);
+                done();
+            });
+    });
+
+
 });
