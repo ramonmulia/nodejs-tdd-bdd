@@ -1,6 +1,11 @@
 "use strict";
 
-const url = "/api/v1/todos";
-let ctrl = require('../controllers/todo');
+const url = "/api/v1/todos/";
+let ctrl = require('../controllers/todo'),
+    koaRouter = require('koa-router')();
 
-module.exports = require('koa-router')().post(url, ctrl.create);
+module.exports = koaRouter
+    .post(url, ctrl.create)
+    .get(url, ctrl.getAll)
+    .get(url+':id', ctrl.getOne);
+

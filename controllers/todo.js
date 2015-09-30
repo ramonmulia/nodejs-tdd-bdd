@@ -4,7 +4,7 @@ let model = require('../models/todo'),
     parse = require('co-body');
 
 module.exports = {
-    create: function* create() {
+    create: function*() {
 
         let body = yield parse(this),
             todoCreate = yield model.create(body);
@@ -16,6 +16,15 @@ module.exports = {
         else{
             this.status = 404;
         }
+    },
+    getAll: function*(){
+        let getTodo = yield model.find({}).exec();
+        this.body = getTodo;
+    },
+
+    getOne: function* (){
+        let getTodo = yield model.findOne({_id : this.params.id}).exec();
+        this.body = getTodo;
     }
 }
 
