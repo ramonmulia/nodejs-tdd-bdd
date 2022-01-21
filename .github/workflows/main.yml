@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the action
-        uses: ./ # Uses an action in the root directory
+        uses: ramonmulia/test_linked_issue@v4
         id: check
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
