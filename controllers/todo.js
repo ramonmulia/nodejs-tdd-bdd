@@ -8,6 +8,7 @@ module.exports = {
 
         let body = yield parse(this),
             todoCreate = yield model.create(body);
+            console.log('heeeee');
 
         if (todoCreate) {
             this.status = 200;
