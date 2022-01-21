@@ -14,7 +14,7 @@ describe("routes todo testing", () => {
     };
     let id = null;
 
-    it('should be create a todo', (done)=> {
+    it('should be create a  todo', (done)=> {
         request
             .post(url.resolve(baseUrl, '/api/v1/todos'))
             .send(body)
