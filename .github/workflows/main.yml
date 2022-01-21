@@ -11,7 +11,7 @@ jobs:
     name: Check linked issues
     steps:
       - name: Use the action
-        uses: ramonmulia/test_linked_issue@v2
+        uses: ramonmulia/test_linked_issue@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           exclude-branches: "release/**, dependabot/**"
