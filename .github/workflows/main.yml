@@ -2,8 +2,6 @@ name: Test linked issues
 on:
   pull_request_target:
     types: [opened, edited, reopened, synchronize]
-  pull_request:
-    types: [opened, edited, reopened, synchronize]
     
 
 jobs:
@@ -14,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the action
-        uses: ramonmulia/test_linked_issue@v7
+        uses:  nearform/github-action-check-linked-issues@v1
         id: check
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
