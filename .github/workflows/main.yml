@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the action
-        uses: ramonmulia/test_linked_issue@v6
+        uses: ramonmulia/test_linked_issue@v7
         id: check
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
