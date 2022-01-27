@@ -6,7 +6,7 @@ let koa = require('koa'),
 
 mongoose.connect('mongodb://localhost/todo');
 
-console.log('test....')
+console.log('test')
 
 app.use(require('./routes/todos-route').routes())
 
