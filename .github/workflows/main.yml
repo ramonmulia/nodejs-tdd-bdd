@@ -1,10 +1,6 @@
 name: Test linked issues
 on:
-  pull_request:
-    types: [opened, edited]
   push:
-     branches:    
-      - 'master'
       
 jobs:
   check_pull_requests:
