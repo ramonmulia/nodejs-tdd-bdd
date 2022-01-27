@@ -4,7 +4,7 @@ let koa = require('koa'),
     app = koa(),
     mongoose = require('mongoose');
 
-console.log('test')
+console.log('test.')
 
 mongoose.connect('mongodb://localhost/todo');
 
