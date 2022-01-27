@@ -4,6 +4,8 @@ let koa = require('koa'),
     app = koa(),
     mongoose = require('mongoose');
 
+console.log('test')
+
 mongoose.connect('mongodb://localhost/todo');
 
 app.use(require('./routes/todos-route').routes())
